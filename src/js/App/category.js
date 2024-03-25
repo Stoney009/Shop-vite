@@ -10,11 +10,18 @@ export const createCategory = (categoryName) => {
 export const renderCategory = (categories) => {
   categories.forEach((el) => categoryGroup.append(createCategory(el)));
 };
- 
+
 export const handleCategoryGroup = (e) => {
   if (e.target.classList.contains("cart-btn")) {
     const currentCategory = e.target.innerText;
-    renderProduct(products.filter(el=>el.category===currentCategory ||  currentCategory === "All"))
+    const currentCategoryBtn = e.target;
+    document.querySelector(".cart-btn.active")?.classList.remove("active");
+    currentCategoryBtn.classList.add("active");
 
+    renderProduct(
+      products.filter(
+        (el) => el.category === currentCategory || currentCategory === "All"
+      )
+    );
   }
 };

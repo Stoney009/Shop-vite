@@ -120,9 +120,16 @@
               <span class="sr-only">Close menu</span>
             </button>
           </div>
-          <div id="cartItemGroup"></div>
+          <div id="cartItemGroup" class=" h-full ">
+            <div class="hidden last:flex justify-center items-center mt-[50%]">
+              <div class="text-center w-full h-full  mt-auto">
+                <img src="./Assets/Ecommerce checkout laptop-bro.svg" alt="" />
+                <p>There is no list</p>
+              </div>
+            </div>
+          </div>
           <div
-            class="cart-footer bg-blue-700 text-white px-3 flex flex-col gap-3 rounded-md py-3 mt-auto sticky bottom-0"
+            class="cart-footer absolute z-20 bg-blue-700 text-white px-3 flex flex-col gap-3 rounded-md py-3 mt-auto sticky bottom-0"
           >
             <div class="flex justify-between items-center">
               <p class="font-semibold text-lg">Total</p>
@@ -142,7 +149,7 @@
           <h4 class="mb-2">Product Categories</h4>
           <div id="categoryGroup" class="flex gap-2 overflow-x-scroll">
             <button
-              class="border active:scale-90 duration-100 cart-btn text-nowrap border-gray-700 bg-gray-700 text-white px-4 py-1 rounded"
+              class="border active active:scale-90 duration-100 cart-btn text-nowrap border-gray-700 px-4 py-1 rounded"
             >
               All
             </button>
@@ -239,7 +246,9 @@
             alt=""
           />
           <div class="cart-info relative rounded-md border border-gray-400 p-5">
-            <button class="cart-item-remove absolute top-5 right-5 hidden group-hover:flex">
+            <button
+              class="cart-item-remove absolute top-5 right-5 hidden group-hover:flex"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -255,11 +264,11 @@
                 />
               </svg>
             </button>
-            <p class="cart-item-title font-bold mb-3 mt-5 line-clamp-2 ">
+            <p class="cart-item-title font-bold mb-3 mt-5 line-clamp-2">
               Mens Cotton Jacket
             </p>
             <div class="flex justify-between">
-              <p>$ <span class="cart-item-price">109.5</span></p>
+              <p>$ <span class="cart-item-price hidden  ">109.5</span> <span class="cart-item-cost ">109.5</span></p>
               <div class="">
                 <button
                   class="cart-q-sub active:scale-75 duration-200 opacity-0 pointer-events-none group-hover:opacity-100 -translate-x-10 group-hover:pointer-events-auto group-hover:translate-x-0 bg-gray-200 rounded p-1 print:hidden"
